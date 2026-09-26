@@ -1,0 +1,13 @@
+{
+  "domain": "octopus_agile",
+  "name": "Octopus Agile Tariff",
+  "codeowners": ["GirthiusMaximus"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/GirthiusMaximus/a_a1",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/GirthiusMaximus/a_a1/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

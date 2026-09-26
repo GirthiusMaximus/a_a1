@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Octopus Agile tariff",
+        "description": "Pick the electricity region for your meter. Prices are half-hourly and are published for the next day at around 16:00 UK time.",
+        "data": {
+          "region": "Region",
+          "product_code": "Product code",
+          "price_cap": "Price cap override (p/kWh, optional)"
+        },
+        "data_description": {
+          "region": "The GSP region letter from your electricity bill (the tariff is built as E-1R-<product>-<letter>).",
+          "product_code": "Defaults to the current Agile product. Only change this if Octopus releases a new version.",
+          "price_cap": "Leave empty to use the automatic Ofgem price cap. Enter your regional cap rate for a more accurate comparison line."
+        }
+      }
+    },
+    "error": {
+      "no_rates": "No Agile rates found for this region and product code. Check them and try again.",
+      "cannot_connect": "Unable to reach the Octopus Energy API. Check your internet connection and try again.",
+      "unknown": "Unexpected error. Check the Home Assistant logs."
+    },
+    "abort": {
+      "already_configured": "This region is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Octopus Agile options",
+        "description": "Adjust the product code or the price cap used for the comparison line. Clear the cap to fall back to the automatic Ofgem value.",
+        "data": {
+          "product_code": "Product code",
+          "price_cap": "Price cap override (p/kWh)"
+        },
+        "data_description": {
+          "price_cap": "Enter your regional Ofgem cap unit rate for a more accurate line, or clear it to use the built-in national average."
+        }
+      }
+    },
+    "error": {
+      "no_rates": "No Agile rates found for this region and product code.",
+      "cannot_connect": "Unable to reach the Octopus Energy API.",
+      "unknown": "Unexpected error. Check the Home Assistant logs."
+    }
+  }
+}
